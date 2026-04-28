@@ -1,0 +1,12 @@
+{
+  "name": "claude-session-to-md",
+  "version": "0.1.0",
+  "description": "Convert Claude Code session jsonl logs into readable per-session markdown files for archiving and search. Handles subagent nesting, idempotent re-runs, and multi-environment merge.",
+  "author": {
+    "name": "skarl86",
+    "url": "https://github.com/skarl86"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/skarl86/claude-plugins/tree/main/plugins/claude-session-to-md",
+  "repository": "https://github.com/skarl86/claude-plugins"
+}

@@ -1,27 +1,33 @@
-# skills
+# claude-plugins
 
-skarl86's personal collection of [Claude Code](https://claude.com/claude-code) skills, packaged as a plugin.
+skarl86's personal collection of [Claude Code](https://claude.com/claude-code) plugins.
+
+Each plugin is independently installable, so you can pick only the ones you want instead of pulling everything in.
 
 ## Install
 
-Add this repo as a marketplace, then install the plugin:
+Add the marketplace once:
 
 ```
-/plugin marketplace add skarl86/skills
-/plugin install skills
+/plugin marketplace add skarl86/claude-plugins
 ```
 
-After installing, the bundled skills become available to Claude Code in your sessions.
+Then install whichever plugin(s) you need:
 
-## Skills
+```
+/plugin install github-direnv
+/plugin install claude-session-to-md
+```
 
-### [github-direnv](skills/github-direnv/SKILL.md)
+## Plugins
+
+### [github-direnv](plugins/github-direnv)
 
 Folder-scoped GitHub authentication via direnv. When you `cd` into a configured directory, `GH_TOKEN` is auto-populated for a specific `gh` account, so `gh` and `git push/pull` use that account — without globally switching the active gh account or affecting other terminals/IDEs.
 
 **Use when:** you have multiple `gh auth` accounts (personal/work/org) and keep hitting `Repository not found` errors after pushing from the wrong folder.
 
-### [claude-session-to-md](skills/claude-session-to-md/README.md)
+### [claude-session-to-md](plugins/claude-session-to-md)
 
 Convert Claude Code session jsonl logs (`~/.claude/projects/`, `~/.claude-envs/*/projects/`) into readable per-session markdown files. Includes subagent (Task tool) child conversations, idempotent re-runs, and noise filtering.
 
@@ -39,20 +45,23 @@ Wins on every axis: the baseline writes its own header format instead of YAML fr
 
 ---
 
-More skills will be added over time.
+More plugins will be added over time.
 
 ## Layout
 
 ```
 .
 ├── .claude-plugin/
-│   ├── plugin.json        # plugin manifest
-│   └── marketplace.json   # marketplace listing
-└── skills/
-    └── <skill-name>/
-        ├── SKILL.md       # what Claude reads
-        ├── README.md      # human-facing docs (some skills)
-        └── scripts/       # bundled helpers (some skills)
+│   └── marketplace.json        # marketplace listing — points at each plugin
+└── plugins/
+    └── <plugin-name>/
+        ├── .claude-plugin/
+        │   └── plugin.json     # plugin manifest
+        └── skills/
+            └── <skill-name>/
+                ├── SKILL.md    # what Claude reads
+                ├── README.md   # human-facing docs (some skills)
+                └── scripts/    # bundled helpers (some skills)
 ```
 
 ## License

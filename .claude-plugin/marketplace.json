@@ -1,17 +1,19 @@
 {
-  "name": "skarl86-skills",
+  "name": "skarl86-claude-plugins",
   "owner": {
     "name": "skarl86",
     "url": "https://github.com/skarl86"
   },
   "plugins": [
     {
-      "name": "skills",
-      "source": {
-        "source": "github",
-        "repo": "skarl86/skills"
-      },
-      "description": "skarl86's personal collection of Claude Code skills"
+      "name": "github-direnv",
+      "source": "./plugins/github-direnv",
+      "description": "Folder-scoped GitHub authentication via direnv (auto-switch gh / git push by directory)."
+    },
+    {
+      "name": "claude-session-to-md",
+      "source": "./plugins/claude-session-to-md",
+      "description": "Convert Claude Code session jsonl logs into per-session markdown files for archive/search."
     }
   ]
 }

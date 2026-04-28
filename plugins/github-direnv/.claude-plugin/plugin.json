@@ -1,0 +1,12 @@
+{
+  "name": "github-direnv",
+  "version": "0.1.0",
+  "description": "Folder-scoped GitHub authentication via direnv. Auto-switch gh / git push between accounts based on the current directory, no global gh auth switch needed.",
+  "author": {
+    "name": "skarl86",
+    "url": "https://github.com/skarl86"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/skarl86/claude-plugins/tree/main/plugins/github-direnv",
+  "repository": "https://github.com/skarl86/claude-plugins"
+}
