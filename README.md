@@ -18,6 +18,7 @@ Then install whichever plugin(s) you need:
 /plugin install github-direnv
 /plugin install claude-session-to-md
 /plugin install blog-illustrate
+/plugin install ralph-bootstrap
 ```
 
 ## Plugins
@@ -51,6 +52,14 @@ Generate clean illustrations for blog posts when you don't have screenshots — 
 **Use when:** reviewing a text-only draft and wondering "where would a diagram help?", or when original screenshots have PII / internal paths that can't be published as-is.
 
 Bundles 6 ready-to-edit templates with a unified Dracula-inspired dark theme + macOS terminal chrome, so a series of posts shares the same visual tone.
+
+### [ralph-bootstrap](plugins/ralph-bootstrap)
+
+Bootstrap a [Ralph loop](https://ghuntley.com/ralph/) scaffold from a one-sentence goal. Creates `specs/` (overview / architecture / constraints), priority-ordered `TODO.md`, fixed-prompt `PROMPT.md`, plus append-only `decisions.md` / `progress.md` — the seven state files needed to run Claude in a `while`-loop until `ALL DONE`.
+
+**Use when:** you have a vague but non-trivial goal and want Claude to grind on it autonomously across many iterations, instead of micromanaging each step. Ambiguity becomes `[ASSUMPTION]` markers in the specs (greppable), not interview questions.
+
+`PROMPT.md` declares **two activation modes** — wrapper script (fresh Claude per iteration) and in-session (current Claude becomes the loop body) — and explicitly forbids phase-boundary check-ins like "P0 done, continue with P1?", so the loop doesn't stall at natural seams.
 
 ---
 

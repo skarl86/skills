@@ -1,0 +1,12 @@
+{
+  "name": "ralph-bootstrap",
+  "version": "0.1.0",
+  "description": "Bootstrap a Ralph loop scaffold (specs/, TODO.md, PROMPT.md, decisions.md, progress.md) from a one-sentence goal — the state files needed to run Claude in a fixed-prompt while-loop until ALL DONE.",
+  "author": {
+    "name": "skarl86",
+    "url": "https://github.com/skarl86"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/skarl86/claude-plugins/tree/main/plugins/ralph-bootstrap",
+  "repository": "https://github.com/skarl86/claude-plugins"
+}

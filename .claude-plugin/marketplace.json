@@ -19,6 +19,11 @@
       "name": "blog-illustrate",
       "source": "./plugins/blog-illustrate",
       "description": "Generate clean illustrations (terminal mockups, decision trees, comparison cards) for blog posts. HTML/CSS → Playwright PNG → blog MCP upload → body insertion."
+    },
+    {
+      "name": "ralph-bootstrap",
+      "source": "./plugins/ralph-bootstrap",
+      "description": "Bootstrap a Ralph loop scaffold (specs/, TODO.md, PROMPT.md, decisions.md, progress.md) from a one-sentence goal — state files for running Claude in a fixed-prompt while-loop."
     }
   ]
 }
